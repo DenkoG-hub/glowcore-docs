@@ -367,6 +367,35 @@ kbd {
   box-shadow: 0 0 32px rgba(224, 24, 95, 0.18), 0 0 0 1px rgba(124, 58, 237, 0.2);
 }
 
+/* Embedded Tally form: light surface so Tally's default dark text keeps its contrast */
+.form-embed {
+  margin-block: 1.25rem;
+  padding: 0.5rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: #ffffff;
+  color-scheme: light;
+  overflow: hidden;
+}
+
+@media (min-width: 700px) {
+  .form-embed {
+    padding: 1.25rem;
+  }
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  border: 0;
+}
+
+/* Without JavaScript the form can't load; the noscript link is shown instead. */
+html:not(.js) .form-embed {
+  display: none;
+}
+
 .note {
   margin-block: 1.25rem;
   padding: 1rem 1.25rem;
