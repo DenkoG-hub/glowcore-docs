@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sections and blocks | Glowcore theme docs</title>
+    <meta name="description" content="Every Glowcore section and block with its settings as they appear in the Shopify theme editor, from the header and home page sections to the product, cart, collection, search, blog and utility pages.">
+    <meta name="theme-color" content="#0a0a0d">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Glowcore <span class="brand__docs">docs</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting started</a></li>
+          <li><a href="theme-settings.html">Theme settings</a></li>
+          <li><a href="sections.html" aria-current="page">Sections</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="support-policy.html">Support policy</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="container">
+      <div class="page-intro">
+        <span class="eyebrow">Reference</span>
+        <h1>Sections and blocks</h1>
+        <p class="lead">What each section and block is for, every setting it has, and tips for using it. Setting names match the theme editor.</p>
+      </div>
+
+      <p>Many sections share these settings, so they're described once here:</p>
+      <ul>
+        <li><strong>Color scheme:</strong> picks one of the color schemes from <a href="theme-settings.html#colors">Theme settings &gt; Colors</a>.</li>
+        <li><strong>Top padding</strong> and <strong>Bottom padding</strong> (under <strong>Padding</strong>): space above and below the section, from 0 to 100px in steps of 4px.</li>
+        <li><strong>Columns on desktop</strong> and <strong>Columns on mobile</strong>: how many cards or images sit side by side.</li>
+      </ul>
+
+      <nav class="panel toc toc--wide" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Sections on this page</h2>
+        <ol>
+          <li><a href="#header">Header</a></li>
+          <li><a href="#announcement-bar">Announcement bar</a></li>
+          <li><a href="#video-banner">Video banner</a></li>
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#product-carousel">Product carousel</a></li>
+          <li><a href="#category-tiles">Category tiles</a></li>
+          <li><a href="#trust-bar">Trust bar</a></li>
+          <li><a href="#featured-collection">Featured collection</a></li>
+          <li><a href="#featured-product">Featured product</a></li>
+          <li><a href="#blog-posts">Blog posts</a></li>
+          <li><a href="#image-gallery">Image gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#email-signup">Email signup</a></li>
+          <li><a href="#contact-form">Contact form</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#custom-liquid">Custom Liquid</a></li>
+          <li><a href="#custom-section">Custom section</a></li>
+          <li><a href="#footer">Footer</a></li>
+          <li><a href="#product-page">Product page</a></li>
+          <li><a href="#product-blocks">Product blocks</a></li>
+          <li><a href="#related-products">Related products</a></li>
+          <li><a href="#cart">Cart drawer and cart page</a></li>
+          <li><a href="#collection">Collection page</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#article">Blog post (article)</a></li>
+          <li><a href="#page">Page</a></li>
+          <li><a href="#list-collections">Collections list</a></li>
+          <li><a href="#not-found">404 page</a></li>
+          <li><a href="#gift-card">Gift card</a></li>
+          <li><a href="#password">Password page</a></li>
+        </ol>
+      </nav>
+
+      <!-- Header group -->
+
+      <section class="doc-section" aria-labelledby="header">
+        <h2 id="header">Header</h2>
+        <p>The top of every page: logo, navigation, search, account, country and language selectors and cart. It lives in the header group, with the announcement bar.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Header settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Logo text</th><td>Text logo in the header. Leave empty to show the store name. Hidden when a logo image is set in Theme settings.</td></tr>
+              <tr><th scope="row">Main menu</th><td>The menu for the header navigation and the mobile menu.<span class="default">Default: Main menu</span></td></tr>
+              <tr><th scope="row">Customer account menu</th><td>The links in the account menu that opens from the account icon. The icon shows only when customer accounts are turned on.<span class="default">Default: Customer account main menu</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Desktop navigation</th></tr>
+              <tr><th scope="row">Navigation type</th><td><strong>Dropdown</strong> shows level 2 links in a dropdown with level 3 links indented under them. <strong>Mega menu</strong> shows level 2 links as columns in a full-width panel and supports promo blocks.<span class="default">Default: Dropdown</span></td></tr>
+              <tr><th scope="row">Open navigation on hover</th><td>Opens dropdowns and mega menus when the pointer rests on a menu item. Clicking and the keyboard always work.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Hover delay</th><td>How long the pointer rests before a menu opens, from 0 to 600 ms. Shows when Open navigation on hover is on.<span class="default">Default: 150 ms</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Country and language selectors</th></tr>
+              <tr><th scope="row">Show country selector on desktop</th><td>Adds a compact country and currency selector next to the account and cart icons from 1280px wide.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Show language selector on desktop</th><td>Adds a compact language selector next to the account and cart icons from 1280px wide.<span class="default">Default: off</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Selectors show only when the store has more than one country or language. The mobile menu always includes them.</p>
+        <h3>Header blocks</h3>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Mega menu promo block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Menu item</th><td>The exact name of a top-level menu item. The promo shows in that item's mega menu.</td></tr>
+              <tr><th scope="row">Image</th><td>Promo image, 4:3 aspect ratio recommended.</td></tr>
+              <tr><th scope="row">Heading</th><td>Text over the promo.<span class="default">Default: New arrivals</span></td></tr>
+              <tr><th scope="row">Link</th><td>Where the promo links to.</td></tr>
+              <tr><th scope="row">Link label</th><td>Text of the promo link.<span class="default">Default: Shop now</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Custom Liquid block (header)</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Custom Liquid</th><td>Shows next to the search and cart icons. Add app snippets or other Liquid code.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Tips:</strong> promo blocks only show with the Mega menu navigation type. Search in the header shows product, collection, article and page suggestions as customers type.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="announcement-bar">
+        <h2 id="announcement-bar">Announcement bar</h2>
+        <p>A scrolling bar above the header for one short message, such as your shipping offer. It pauses when the pointer is over it and doesn't move for customers who turn on reduced motion.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Announcement bar settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Show truck icon</th><td>Shows a delivery truck icon before the text.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Announcement block (one per bar)</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Text</th><td>The message.<span class="default">Default: Free shipping on orders over $50</span></td></tr>
+              <tr><th scope="row">Link</th><td>Optional page the message links to.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note note--warn">Change the default text to your real shipping offer. See <a href="getting-started.html#shipping-text">Free shipping text</a>.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Home page sections -->
+
+      <section class="doc-section" aria-labelledby="video-banner">
+        <h2 id="video-banner">Video banner</h2>
+        <p>A full-width banner with a looping, muted background video, a heading and a button. When it's the first section on the home page, its heading is the page's main heading.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Video banner settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Video</th><td>The background video. Upload short, muted loops in Content &gt; Files. Plays without sound.</td></tr>
+              <tr><th scope="row">Heading</th><td>Main text over the video.<span class="default">Default: Level up your setup</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Supporting text under the heading.<span class="default">Default: RGB gear, pro peripherals and PC parts for every build.</span></td></tr>
+              <tr><th scope="row">Button label</th><td>Text on the button. The button shows when both Button label and Button link are filled in.<span class="default">Default: Shop now</span></td></tr>
+              <tr><th scope="row">Button link</th><td>Where the button goes.<span class="default">Default: all products (/collections/all)</span></td></tr>
+              <tr><th scope="row">Text position</th><td>Left, Center or Right.<span class="default">Default: Left</span></td></tr>
+              <tr><th scope="row">Overlay strength</th><td>How much the video is darkened behind the text, from 20 to 90%. Left and right positions keep at least 85% behind the text so it stays readable.<span class="default">Default: 50%</span></td></tr>
+              <tr><th scope="row">Height</th><td>Short, Medium or Tall.<span class="default">Default: Medium</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the text and button.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Tips:</strong> keep videos short (a few seconds) and small in file size so the page loads fast. Avoid text inside the video itself.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="hero">
+        <h2 id="hero">Hero</h2>
+        <p>A large banner with a background image, heading, subheading and button. When it's the first section on the home page, its heading is the page's main heading.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Hero settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Background image</th><td>The image behind the text.</td></tr>
+              <tr><th scope="row">Heading</th><td>Main text.<span class="default">Default: Trending. Fast. Unmissable.</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Supporting text.<span class="default">Default: Discover the products everyone is talking about.</span></td></tr>
+              <tr><th scope="row">Button label</th><td>Text on the button.<span class="default">Default: Shop now</span></td></tr>
+              <tr><th scope="row">Button link</th><td>Where the button goes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="product-carousel">
+        <h2 id="product-carousel">Product carousel</h2>
+        <p>A continuously scrolling row of product cards from one collection, with previous and next arrows. It pauses on hover and stops moving for customers who turn on reduced motion. You can add it more than once, for example for trending products and new arrivals.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Product carousel settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the carousel.<span class="default">Default: Trending now</span></td></tr>
+              <tr><th scope="row">Collection</th><td>The collection the products come from.</td></tr>
+              <tr><th scope="row">Show "View all" link</th><td>Links to the selected collection.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Products to show</th><td>From 4 to 20 products.<span class="default">Default: 10</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="category-tiles">
+        <h2 id="category-tiles">Category tiles</h2>
+        <p>Large image tiles that link to your main collections, such as Keyboards, Headsets and PC parts. Add one Tile block per collection.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Category tiles settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the tiles.<span class="default">Default: Shop by category</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Tile block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Collection</th><td>The collection the tile links to. Its image and name are used by default.</td></tr>
+              <tr><th scope="row">Custom image</th><td>Optional. Replaces the collection image. 3:4 aspect ratio recommended.</td></tr>
+              <tr><th scope="row">Custom label</th><td>Optional. Replaces the collection name.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="trust-bar">
+        <h2 id="trust-bar">Trust bar</h2>
+        <p>A row of short promises with icons, such as shipping, secure checkout, returns and support. Add one Trust item block per promise.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Trust item block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Icon</th><td>Shipping, Secure checkout, Returns or Support.<span class="default">Default: Shipping</span></td></tr>
+              <tr><th scope="row">Heading</th><td>The promise.<span class="default">Default: Free shipping</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>A short detail.<span class="default">Default: On all orders</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note note--warn">Only list promises your store keeps. Match the text to your shipping, returns and support policies.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="featured-collection">
+        <h2 id="featured-collection">Featured collection</h2>
+        <p>A grid of product cards from one collection.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Featured collection settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the grid.<span class="default">Default: Featured picks</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Optional text under the heading.</td></tr>
+              <tr><th scope="row">Collection</th><td>The collection the products come from.</td></tr>
+              <tr><th scope="row">Products to show</th><td>4, 8 or 12 products.<span class="default">Default: 8</span></td></tr>
+              <tr><th scope="row">Show "View all" button</th><td>Adds a button to the full collection.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="featured-product">
+        <h2 id="featured-product">Featured product</h2>
+        <p>One product with its media and buy options, on any page. It uses the same blocks as the product page, except Complementary products, and supports app blocks.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Featured product settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Product</th><td>The product to show.</td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+              <tr><th scope="row">Desktop media width</th><td>Small, Medium or Large. Media is always full width on mobile.<span class="default">Default: Large</span></td></tr>
+              <tr><th scope="row">Use image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show link to product page</th><td>Adds a link to the full product page.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Block settings are described in <a href="#product-blocks">Product blocks</a>. In this section the Product rating block has no settings.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="blog-posts">
+        <h2 id="blog-posts">Blog posts</h2>
+        <p>The latest posts from one blog as cards, for the home page or any other page.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Blog posts settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the posts.<span class="default">Default: From the blog</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Optional text under the heading.</td></tr>
+              <tr><th scope="row">Blog</th><td>The blog the posts come from.</td></tr>
+              <tr><th scope="row">Number of posts</th><td>From 1 to 12 posts.<span class="default">Default: 3</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 4.<span class="default">Default: 3</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Post cards</th></tr>
+              <tr><th scope="row">Show featured image</th><td>Shows each post's featured image.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Image ratio</th><td>Landscape, Square, Portrait or Adapt to image.<span class="default">Default: Landscape</span></td></tr>
+              <tr><th scope="row">Show date</th><td>Shows the publish date.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show author</th><td>Shows the author's name.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Show excerpt</th><td>Shows the post excerpt, or the start of the post.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show "View all" button</th><td>Adds a button to the blog.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="image-gallery">
+        <h2 id="image-gallery">Image gallery</h2>
+        <p>A grid of your own images, such as customer setups or products in use. Each image can link to a page or a product. This section uses images you upload. It isn't connected to Instagram.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Image gallery settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the grid.<span class="default">Default: Built by our community</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Text under the heading.<span class="default">Default: Setups and gear shared by customers</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Layout</th></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 3 to 6.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Columns on mobile</th><td>2 or 3.<span class="default">Default: 2</span></td></tr>
+              <tr><th scope="row">Image ratio</th><td>Square, Portrait or Natural (each image's own shape).<span class="default">Default: Square</span></td></tr>
+              <tr><th scope="row">Spacing between images</th><td>From 0 to 32px.<span class="default">Default: 12px</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Image block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Image</th><td>The image.</td></tr>
+              <tr><th scope="row">Caption</th><td>Optional caption. Also used as alt text when the image has none.</td></tr>
+              <tr><th scope="row">Link</th><td>Optional page the image links to.</td></tr>
+              <tr><th scope="row">Product</th><td>Shows the product title and price on hover or focus and links to the product. Replaces the link.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Tips:</strong> only use images you have permission to use. Add alt text to each image in <strong>Content &gt; Files</strong>. The section also has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="testimonials">
+        <h2 id="testimonials">Testimonials</h2>
+        <p>Quotes from your customers in cards. On mobile the cards scroll sideways with Previous and Next buttons. The cards never move on their own.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Testimonials settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the quotes.<span class="default">Default: What gamers say</span></td></tr>
+              <tr><th scope="row">Subheading</th><td>Optional text under the heading.</td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 4.<span class="default">Default: 3</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Testimonial block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Quote</th><td>What the customer said.</td></tr>
+              <tr><th scope="row">Author name</th><td>The customer's name.</td></tr>
+              <tr><th scope="row">Author detail</th><td>For example a city or the product they bought.</td></tr>
+              <tr><th scope="row">Author image</th><td>Optional photo, 128 x 128px recommended.</td></tr>
+              <tr><th scope="row">Rating</th><td>None or 1 to 5 stars. Only add a rating the customer actually gave.<span class="default">Default: None</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note note--warn">The default quote is a placeholder. Replace it with real quotes from real customers, and remove any block you don't fill in. The section also has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="email-signup">
+        <h2 id="email-signup">Email signup</h2>
+        <p>A newsletter signup form with a heading and text. Subscribers are added to Customers with the newsletter tag and email marketing consent.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Email signup settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the form.<span class="default">Default: Level up your inbox</span></td></tr>
+              <tr><th scope="row">Text</th><td>Text above the form.<span class="default">Default: Get new drops, restocks and members-only deals first.</span></td></tr>
+              <tr><th scope="row">Button label</th><td>Text on the button. Leave empty to use Subscribe.</td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="contact-form">
+        <h2 id="contact-form">Contact form</h2>
+        <p>A contact form. Messages are sent to your store's email address. It's included on the Contact page template, and you can add it to other pages.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Contact form settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the form.<span class="default">Default: Get in touch</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Tip:</strong> to use it, create a page in <strong>Online Store &gt; Pages</strong> and choose the <strong>contact</strong> template for it.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="apps">
+        <h2 id="apps">Apps</h2>
+        <p>A section that holds app blocks from the apps you install, such as a reviews widget. It works on every page.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Apps settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Make section margins the same as the theme</th><td>On: the app content uses the theme's page width. Off: it uses the full width of the screen.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors behind the app content.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding. Apps control their own blocks' settings.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="custom-liquid">
+        <h2 id="custom-liquid">Custom Liquid</h2>
+        <p>Adds your own Liquid, HTML or app snippet code as a section, on any page.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Custom Liquid settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Liquid code</th><td>Add app snippets or other Liquid code to create advanced customizations.</td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding. A <strong>Custom Liquid</strong> block with a <strong>Custom Liquid</strong> field is also available in the header, footer, product information, featured product, collection, cart footer, page, Custom section and Group.</p>
+        <p class="note note--warn">Code you add here isn't covered by theme support. See the <a href="support-policy.html">support policy</a>.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="custom-section">
+        <h2 id="custom-section">Custom section</h2>
+        <p>A flexible section you build from blocks: Text, Group and Custom Liquid, plus app blocks.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Custom section settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Background</th><td>Optional background image.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Text block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Text</th><td>The text.</td></tr>
+              <tr><th scope="row">Text style</th><td>Heading, Subheading or Body text.<span class="default">Default: Heading</span></td></tr>
+              <tr><th scope="row">Alignment</th><td>Left, center or right.<span class="default">Default: Left</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Group block (added as Column or Row)</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Layout direction</th><td>Horizontal places the blocks inside side by side, Vertical stacks them.<span class="default">Default: Vertical</span></td></tr>
+              <tr><th scope="row">Alignment</th><td>Left, Center or Right. Shows when Layout direction is Vertical.<span class="default">Default: Left</span></td></tr>
+              <tr><th scope="row">Padding</th><td>Space inside the group, from 0 to 200px.<span class="default">Default: 0px</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Groups can hold other blocks, including other groups.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Footer -->
+
+      <section class="doc-section" aria-labelledby="footer">
+        <h2 id="footer">Footer</h2>
+        <p>The bottom of every page, in a glass panel. Add blocks for menus, text, your brand, email signup and social media icons. On mobile, menu blocks become expandable lists.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Footer settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the footer.</td></tr>
+              <tr><th scope="row">Maximum columns on desktop</th><td>From 2 to 6 block columns.<span class="default">Default: 4</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Bottom row</th></tr>
+              <tr><th scope="row">Show country selector</th><td>Shows only when the store sells to more than one country or region in Markets.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show language selector</th><td>Shows only when the store has more than one published language.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show Follow on Shop button</th><td>Lets customers follow your store in the Shop app. Shop Pay and the Shop channel are required.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show payment icons</th><td>Shows the icons of the payment methods your store accepts.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show policy links</th><td>Links to your policies. Add policies in Settings &gt; Policies.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show Powered by Shopify link</th><td>Adds the Powered by Shopify link after the copyright.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding. The copyright line with the year and your store name always shows.</p>
+        <h3>Footer blocks</h3>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Menu block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Leave empty to use the menu title.</td></tr>
+              <tr><th scope="row">Menu</th><td>The menu to show.<span class="default">Default: Footer menu</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Text block (footer)</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading of the column.<span class="default">Default: About us</span></td></tr>
+              <tr><th scope="row">Text</th><td>Your story, store hours or contact details.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Brand block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Logo</th><td>Leave empty to use the logo from Theme settings, or the store name.</td></tr>
+              <tr><th scope="row">Logo width</th><td>From 60 to 250px.<span class="default">Default: 140px</span></td></tr>
+              <tr><th scope="row">Text</th><td>A short line about your store.<span class="default">Default: Gaming and tech gear that glows.</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Email signup block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading of the column.<span class="default">Default: Join the squad</span></td></tr>
+              <tr><th scope="row">Text</th><td>Text above the form.<span class="default">Default: Drops, restocks and deals, straight to your inbox.</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Social media icons block</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading of the column.<span class="default">Default: Follow us</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Add social media links in <a href="theme-settings.html#social-media">Theme settings &gt; Social media</a>. The footer also has a Custom Liquid block.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Product page -->
+
+      <section class="doc-section" aria-labelledby="product-page">
+        <h2 id="product-page">Product page</h2>
+        <p>The <strong>Product information</strong> section shows the product's media gallery next to its details. The gallery supports images, videos, YouTube and Vimeo videos and 3D models, with thumbnails, arrows and swiping. When a customer picks a variant, that variant's media moves to the front.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Product information settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+              <tr><th scope="row">Desktop media width</th><td>Small, Medium or Large. Media is always full width on mobile.<span class="default">Default: Large</span></td></tr>
+              <tr><th scope="row">Use image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The details column is built from the 19 blocks below plus app blocks. Drag them to change the order. The gift card product template (<code>product.gift-card</code>) uses the same section.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="product-blocks">
+        <h2 id="product-blocks">Product blocks</h2>
+        <p>These blocks are used by Product information and Featured product. Blocks without settings are listed with what they show.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>All 19 product blocks</caption>
+            <thead><tr><th scope="col">Block and settings</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th colspan="2" scope="colgroup" class="group">1. Title</th></tr>
+              <tr><th scope="row">Title</th><td>The full product title. It's the page's main heading. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">2. Vendor</th></tr>
+              <tr><th scope="row">Vendor</th><td>The product's vendor or brand. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">3. Text</th></tr>
+              <tr><th scope="row">Text</th><td>Short text, such as a highlight or a note. Can include bold, italic and links.<span class="default">Default: Text block</span></td></tr>
+              <tr><th scope="row">Text style</th><td>Body text, Subheading or Uppercase.<span class="default">Default: Body text</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">4. Price</th></tr>
+              <tr><th scope="row">Show tax and shipping information</th><td>Shows whether taxes are included and that shipping is calculated at checkout, with a link to your shipping policy when you have one. The price also shows the compare-at price and the unit price when they're set.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">5. Variant picker</th></tr>
+              <tr><th scope="row">Style</th><td>Buttons or Dropdown. Sold out and unavailable options are marked.<span class="default">Default: Buttons</span></td></tr>
+              <tr><th scope="row">Show swatches</th><td>Uses the swatch color or image set on each option value in the product admin. See <a href="faq.html#swatches">swatches</a>.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">6. Quantity selector</th></tr>
+              <tr><th scope="row">Quantity selector</th><td>Lets customers choose a quantity. Follows quantity rules (minimum, maximum and increment) and lists volume pricing when you set them up. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">7. Buy buttons</th></tr>
+              <tr><th scope="row">Show dynamic checkout buttons</th><td>Customers see their preferred payment option, like PayPal or Apple Pay. Hidden on gift cards. The block also shows the Add to cart button and the Shop Pay Installments message when it's available.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">8. Purchase options</th></tr>
+              <tr><th scope="row">Purchase options</th><td>Shows subscription options when the product has selling plans from a subscription app. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">9. Pickup availability</th></tr>
+              <tr><th scope="row">Pickup availability</th><td>Shows whether the selected variant can be picked up at your locations. Shows only when local pickup is set up in Settings &gt; Shipping and delivery. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">10. Gift card recipient form</th></tr>
+              <tr><th scope="row">Gift card recipient form</th><td>Lets customers send a gift card to someone else, with recipient email, name, message and send date. Only shows on gift card products. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">11. Description</th></tr>
+              <tr><th scope="row">Description</th><td>The product description from the product admin. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">12. Collapsible tab</th></tr>
+              <tr><th scope="row">Heading</th><td>Heading of the tab.<span class="default">Default: Collapsible tab</span></td></tr>
+              <tr><th scope="row">Content</th><td>Text inside the tab, such as specs or shipping details.</td></tr>
+              <tr><th scope="row">Page content</th><td>Replaces the content above when selected. Use a page to share the same text across many products.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">13. SKU</th></tr>
+              <tr><th scope="row">SKU</th><td>The SKU of the selected variant. Updates when the variant changes. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">14. Inventory status</th></tr>
+              <tr><th scope="row">Show inventory count when low</th><td>Shows "Low stock: 3 left" when the inventory is at or below the threshold. Otherwise the block shows In stock, Available on backorder or Out of stock.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Low inventory threshold</th><td>From 1 to 50. Uses your real inventory. Only applies to products that track inventory.<span class="default">Default: 5</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">15. Share</th></tr>
+              <tr><th scope="row">Button label</th><td>Text of the share button. Opens the device's share menu, or copies the product link.<span class="default">Default: Share</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">16. Popup</th></tr>
+              <tr><th scope="row">Link label</th><td>Text of the link that opens the popup.<span class="default">Default: Size guide</span></td></tr>
+              <tr><th scope="row">Page</th><td>The page whose content shows in the popup.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">17. Custom Liquid</th></tr>
+              <tr><th scope="row">Custom Liquid</th><td>Add app snippets or other Liquid code to create advanced customizations.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">18. Complementary products (product page only)</th></tr>
+              <tr><th scope="row">Heading</th><td>Heading above the products.<span class="default">Default: Pairs well with</span></td></tr>
+              <tr><th scope="row">Products to show</th><td>From 1 to 10.<span class="default">Default: 3</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">19. Product rating</th></tr>
+              <tr><th scope="row">Link to reviews</th><td>Product page only. Scrolls to the element with the ID reviews, for example a reviews app block. Stays plain text when the page has no such element.<span class="default">Default: off</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Tips</h3>
+        <ul>
+          <li><strong>Complementary products:</strong> set up complementary products in the Search and Discovery app. The block is empty until you do.</li>
+          <li><strong>Product rating:</strong> shows the rating saved by a product reviews app in the <code>reviews.rating</code> metafield. With no rating, nothing shows. See <a href="faq.html#ratings">product ratings</a>.</li>
+          <li><strong>Inventory status:</strong> shows your real stock only. Glowcore never invents stock levels.</li>
+          <li><strong>App blocks:</strong> click <strong>Add block</strong> and pick a block from an installed app, such as a reviews widget.</li>
+        </ul>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="related-products">
+        <h2 id="related-products">Related products</h2>
+        <p>Product cards under the product information. Recommendations are generated automatically from sales and product data. Fine-tune them in the Search and Discovery app.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Related products settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Heading above the products.<span class="default">Default: You may also like</span></td></tr>
+              <tr><th scope="row">Maximum products to show</th><td>From 2 to 10.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 5.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Cart -->
+
+      <section class="doc-section" aria-labelledby="cart">
+        <h2 id="cart">Cart drawer and cart page</h2>
+        <p>Choose between them in <a href="theme-settings.html#cart">Theme settings &gt; Cart &gt; Cart type</a>. Both show line items with options, subscription details, unit prices and discounts, the subtotal, the estimated total, a tax note and the cart note when it's on. Customers enter discount codes at checkout.</p>
+        <h3>Cart drawer</h3>
+        <p>A side panel that opens after a product is added, from the product page, featured product and quick add on product cards. Customers can change quantities and remove items without leaving the page. Its colors come from <strong>Drawer color scheme</strong> in Theme settings &gt; Cart. The drawer has no section settings.</p>
+        <h3>Cart page</h3>
+        <p>The cart template has two sections:</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Cart items settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the line items.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Cart footer settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the totals and checkout area.</td></tr>
+              <tr><th scope="row">Show dynamic checkout buttons</th><td>Shows the accelerated checkout buttons your store supports, like Shop Pay, Apple Pay or PayPal.<span class="default">Default: on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The cart footer also accepts app blocks and Custom Liquid blocks. An empty cart shows a Continue shopping button. Checkout itself is hosted by Shopify and isn't styled by the theme.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Collection and search -->
+
+      <section class="doc-section" aria-labelledby="collection">
+        <h2 id="collection">Collection page</h2>
+        <p>The <strong>Collection</strong> section shows the collection title, image and description, filters, sorting, a product grid and pagination.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Collection settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Collection banner</th></tr>
+              <tr><th scope="row">Show collection image</th><td>Shows the collection image, 4:3 aspect ratio recommended. Shows wider on mobile.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show collection description</th><td>Shows the description from the collection admin.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Filtering and sorting</th></tr>
+              <tr><th scope="row">Show filters</th><td>Customize filters with the Search and Discovery app.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Filter layout on desktop</th><td>Vertical sidebar or Horizontal bar. Mobile always shows filters in a drawer.<span class="default">Default: Vertical sidebar</span></td></tr>
+              <tr><th scope="row">Visible values per filter</th><td>From 3 to 30. Longer lists show a "Show more" button.<span class="default">Default: 10</span></td></tr>
+              <tr><th scope="row">Show sorting</th><td>Adds a Sort by menu above the products.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Product grid</th></tr>
+              <tr><th scope="row">Products per page</th><td>From 8 to 48.<span class="default">Default: 24</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 5.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Columns on mobile</th><td>1 or 2.<span class="default">Default: 2</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section accepts app blocks and Custom Liquid blocks. Active filters show as removable pills above the grid with a Clear all link. When no products match, customers see "No products found" with a way to clear filters.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="search">
+        <h2 id="search">Search</h2>
+        <p>The search results page, with the same filters and sorting as collection pages. The header search also shows suggestions while customers type.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Search settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Filtering and sorting</th></tr>
+              <tr><th scope="row">Show filters</th><td>Customize filters with the Search and Discovery app.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Filter layout on desktop</th><td>Vertical sidebar or Horizontal bar. Mobile always shows filters in a drawer.<span class="default">Default: Vertical sidebar</span></td></tr>
+              <tr><th scope="row">Visible values per filter</th><td>From 3 to 30. Longer lists show a "Show more" button.<span class="default">Default: 10</span></td></tr>
+              <tr><th scope="row">Show sorting</th><td>Adds a Sort by menu above the results.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Product grid</th></tr>
+              <tr><th scope="row">Results per page</th><td>From 8 to 48.<span class="default">Default: 24</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 5.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Columns on mobile</th><td>1 or 2.<span class="default">Default: 2</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Blog -->
+
+      <section class="doc-section" aria-labelledby="blog">
+        <h2 id="blog">Blog</h2>
+        <p>The blog page (the <strong>Blog posts</strong> section on the blog template) lists posts in a grid or list, with a tag filter and pagination.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Blog page settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Layout</th><td>Grid or List.<span class="default">Default: Grid</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 2 to 4. Applies to the grid layout.<span class="default">Default: 3</span></td></tr>
+              <tr><th scope="row">Columns on mobile</th><td>1 or 2.<span class="default">Default: 1</span></td></tr>
+              <tr><th scope="row">Posts per page</th><td>From 3 to 24.<span class="default">Default: 9</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Post cards</th></tr>
+              <tr><th scope="row">Show featured image</th><td>Shows each post's featured image.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Image ratio</th><td>Landscape, Square, Portrait or Adapt to image.<span class="default">Default: Landscape</span></td></tr>
+              <tr><th scope="row">Show date</th><td>Shows the publish date.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show author</th><td>Shows the author's name.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show excerpt</th><td>Shows the post excerpt, or the start of the post.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show tags</th><td>Shows each post's tags.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show tag filter</th><td>Shows the blog's tags above the posts so customers can filter by tag.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Tags shown before "More tags"</th><td>From 3 to 20. The tag being viewed always shows.<span class="default">Default: 8</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="article">
+        <h2 id="article">Blog post (article)</h2>
+        <p>A single blog post, built from reorderable blocks. Comments show when they're turned on for the blog in <strong>Content &gt; Blog posts &gt; Manage blogs</strong>.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Blog post settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Content width</th><td>Narrow, Medium or Wide.<span class="default">Default: Narrow</span></td></tr>
+              <tr><th scope="row">Comments per page</th><td>From 5 to 50. Comments show when they are enabled in the blog settings.<span class="default">Default: 10</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Blog post blocks</caption>
+            <thead><tr><th scope="col">Block and settings</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th colspan="2" scope="colgroup" class="group">Featured image</th></tr>
+              <tr><th scope="row">Image ratio</th><td>Adapt to image, Landscape or Wide.<span class="default">Default: Landscape</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Title</th></tr>
+              <tr><th scope="row">Title</th><td>The full post title, as the page's main heading. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Date and author</th></tr>
+              <tr><th scope="row">Show date</th><td>Shows the publish date.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show author</th><td>Shows the author's name.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show comment count</th><td>Shows the number of comments when comments are on.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Content</th></tr>
+              <tr><th scope="row">Content</th><td>The post text. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Share</th></tr>
+              <tr><th scope="row">Show social media sharing links</th><td>Adds Facebook, X and Pinterest links next to the copy link button.<span class="default">Default: on</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Tags</th></tr>
+              <tr><th scope="row">Tags</th><td>The post's tags, linked to the blog filtered by each tag. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Back to blog link</th></tr>
+              <tr><th scope="row">Back to blog link</th><td>A link back to the blog. No settings.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Previous and next posts</th></tr>
+              <tr><th scope="row">Previous and next posts</th><td>Links to the older and newer posts. No settings.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also accepts app blocks and has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <!-- Other templates -->
+
+      <section class="doc-section" aria-labelledby="page">
+        <h2 id="page">Page</h2>
+        <p>The <strong>Page</strong> section shows a page's title and content from <strong>Online Store &gt; Pages</strong>.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Page settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Content width</th><td>Narrow, Medium or Wide.<span class="default">Default: Narrow</span></td></tr>
+              <tr><th scope="row">Heading alignment</th><td>Left or Center.<span class="default">Default: Left</span></td></tr>
+              <tr><th scope="row">Show content in a glass panel</th><td>Places the page content in a glass panel.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also accepts app blocks and Custom Liquid blocks and has Top padding and Bottom padding.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="list-collections">
+        <h2 id="list-collections">Collections list</h2>
+        <p>The page at <code>/collections</code> that lists all your collections as cards.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Collections list settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading</th><td>Leave empty to show "Collections".</td></tr>
+              <tr><th scope="row">Sort collections</th><td>Alphabetically, A-Z; Alphabetically, Z-A; Product count, high to low; Product count, low to high; Date, new to old; or Date, old to new. Sorting applies to the collections shown on each page.<span class="default">Default: Alphabetically, A-Z</span></td></tr>
+              <tr><th scope="row">Collections per page</th><td>From 12 to 48.<span class="default">Default: 24</span></td></tr>
+              <tr><th scope="row">Columns on desktop</th><td>From 3 to 5.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Columns on mobile</th><td>1 or 2.<span class="default">Default: 2</span></td></tr>
+              <tr><th scope="row">Image ratio</th><td>Square, Portrait or Landscape.<span class="default">Default: Square</span></td></tr>
+              <tr><th scope="row">Show product count</th><td>Shows how many products each collection has.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show collection description</th><td>Shows each collection's description.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Hide empty collections</th><td>Leaves out collections with no products.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Collections without an image show a letter instead.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="not-found">
+        <h2 id="not-found">404 page</h2>
+        <p>The <strong>Not found</strong> section shows when a page doesn't exist: a heading, a short message, a search form and a Continue shopping button. It has no settings. You can add other sections to the 404 template, such as a product carousel.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="gift-card">
+        <h2 id="gift-card">Gift card</h2>
+        <p>The page customers see when they open a gift card they received. It shows your logo or store name, the gift card balance and expiry date, the code with a copy button, a QR code, an Add to Apple Wallet button, a print button and a link to your store. It has no settings and uses your color schemes and logo from Theme settings.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="password">
+        <h2 id="password">Password page</h2>
+        <p>The page visitors see while your store is password protected. It shows your logo or store name, the message you set in <strong>Online Store &gt; Preferences</strong>, a password form, an email signup form and the Powered by Shopify link. The <strong>Password</strong> section has no settings.</p>
+        <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; 2026 Denko Themes. Glowcore version 1.0.0.</p>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="support-policy.html">Support policy</a></li>
+            <li><a href="mailto:denkothemes@gmail.com">denkothemes@gmail.com</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

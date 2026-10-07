@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQ | Glowcore theme docs</title>
+    <meta name="description" content="Answers to common Glowcore questions: color swatches, filters, product ratings, variant images, the mega menu, country and language selectors, Follow on Shop, cart drawer or cart page, theme updates and translations.">
+    <meta name="theme-color" content="#0a0a0d">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Glowcore <span class="brand__docs">docs</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting started</a></li>
+          <li><a href="theme-settings.html">Theme settings</a></li>
+          <li><a href="sections.html">Sections</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="support-policy.html">Support policy</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="container">
+      <div class="page-intro">
+        <span class="eyebrow">Help</span>
+        <h1>Frequently asked questions</h1>
+        <p class="lead">Quick answers to the questions merchants ask most. Can't find yours? <a href="support.html">Contact support</a>.</p>
+      </div>
+
+      <nav class="panel toc" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Questions</h2>
+        <ol>
+          <li><a href="#swatches">How do I show color swatches?</a></li>
+          <li><a href="#filters">How do I set up filters?</a></li>
+          <li><a href="#ratings">How do I show product ratings?</a></li>
+          <li><a href="#variant-images">How do I show a different image for each variant?</a></li>
+          <li><a href="#mega-menu">How do I set up the mega menu?</a></li>
+          <li><a href="#selectors">Why don't the country or language selectors show?</a></li>
+          <li><a href="#follow-on-shop">Why doesn't the Follow on Shop button show?</a></li>
+          <li><a href="#cart-type">Should I use the cart drawer or the cart page?</a></li>
+          <li><a href="#updates">How do I update Glowcore?</a></li>
+          <li><a href="#translations">How do I translate the theme?</a></li>
+          <li><a href="#discount-codes">Where do customers enter discount codes?</a></li>
+          <li><a href="#code-edits">Can I edit the theme code?</a></li>
+        </ol>
+      </nav>
+
+      <div class="faq">
+        <details id="swatches">
+          <summary><h3>How do I show color swatches?</h3></summary>
+          <div class="answer">
+            <p>Swatches in the variant picker come from Shopify's color swatches. Connect your Color option to the Color category metafield:</p>
+            <ol>
+              <li>Open the product in your Shopify admin and choose a <strong>Category</strong> that has a Color attribute, for example a product category for keyboards or headsets.</li>
+              <li>Under <strong>Variants</strong>, edit the <strong>Color</strong> option and connect it to the <strong>Color</strong> metafield.</li>
+              <li>Pick the color entries for each value. You can set a color or an image for each entry in <strong>Content &gt; Metaobjects</strong>.</li>
+              <li>In the theme editor, make sure <strong>Show swatches</strong> is on in the product page's <strong>Variant picker</strong> block.</li>
+            </ol>
+            <p>Options that aren't connected to a metafield show as plain buttons or a dropdown, depending on the block's <strong>Style</strong>. Product cards show small thumbnails of up to five variant images instead of swatches.</p>
+          </div>
+        </details>
+
+        <details id="filters">
+          <summary><h3>How do I set up filters?</h3></summary>
+          <div class="answer">
+            <p>Filters on collection and search pages are managed in Shopify's free <a href="https://apps.shopify.com/search-and-discovery">Search and Discovery app</a>:</p>
+            <ol>
+              <li>Install the Search and Discovery app.</li>
+              <li>Open the app, go to <strong>Filters</strong> and add the filters you want, such as availability, price, product type, vendor, color or size.</li>
+              <li>In the theme editor, make sure <strong>Show filters</strong> is on in the Collection and Search sections, and choose a <strong>Filter layout on desktop</strong>.</li>
+            </ol>
+            <p>Filters based on the Color metafield show as color swatches.</p>
+          </div>
+        </details>
+
+        <details id="ratings">
+          <summary><h3>How do I show product ratings?</h3></summary>
+          <div class="answer">
+            <p>Glowcore shows stars only when a product has a real rating. Ratings must come from a product reviews app that writes Shopify's standard product metafields <code>reviews.rating</code> and <code>reviews.rating_count</code>. Check your reviews app's documentation to see if it does.</p>
+            <ol>
+              <li>Install a product reviews app and turn on its option to sync ratings to Shopify metafields, if it has one.</li>
+              <li>On the product page, add the <strong>Product rating</strong> block to <strong>Product information</strong>.</li>
+              <li>To show stars on product cards, turn on <strong>Show product rating</strong> in <strong>Theme settings &gt; Product cards</strong>.</li>
+              <li>Optional: turn on <strong>Link to reviews</strong> in the Product rating block. It links to the element with the ID <code>reviews</code>, for example your reviews app's block.</li>
+            </ol>
+            <p>Products without a rating show no stars. Glowcore never shows placeholder or sample ratings.</p>
+          </div>
+        </details>
+
+        <details id="variant-images">
+          <summary><h3>How do I show a different image for each variant?</h3></summary>
+          <div class="answer">
+            <ol>
+              <li>Open the product in your Shopify admin and upload all the images to the product's <strong>Media</strong>.</li>
+              <li>Under <strong>Variants</strong>, click a variant, then click its image placeholder and choose the matching image.</li>
+              <li>Repeat for each variant and save.</li>
+            </ol>
+            <p>When a customer picks a variant on the product page, its image moves to the front of the gallery. Product cards always show the product's first image, and cards for products with several variants also show small thumbnails of up to five variant images.</p>
+          </div>
+        </details>
+
+        <details id="mega-menu">
+          <summary><h3>How do I set up the mega menu?</h3></summary>
+          <div class="answer">
+            <ol>
+              <li>In <strong>Content &gt; Menus</strong>, open your main menu and nest items to build up to three levels. Level 2 items become the columns, level 3 items are listed under them.</li>
+              <li>In the theme editor, click <strong>Header</strong> and set <strong>Navigation type</strong> to <strong>Mega menu</strong>.</li>
+              <li>Optional: add a <strong>Mega menu promo</strong> block. In <strong>Menu item</strong>, type the exact name of the top-level menu item, for example <em>Peripherals</em>, then add an image, heading and link.</li>
+            </ol>
+            <p>The mega menu shows on screens 1280px wide and up. On smaller screens, the same menu opens in the mobile menu drawer as expandable lists.</p>
+          </div>
+        </details>
+
+        <details id="selectors">
+          <summary><h3>Why don't the country or language selectors show?</h3></summary>
+          <div class="answer">
+            <p>Each selector only shows when there's more than one option to choose:</p>
+            <ul>
+              <li><strong>Country selector:</strong> needs more than one country or region in <strong>Settings &gt; Markets</strong>.</li>
+              <li><strong>Language selector:</strong> needs more than one published language in <strong>Settings &gt; Languages</strong>.</li>
+            </ul>
+            <p>Then check the settings: <strong>Show country selector</strong> and <strong>Show language selector</strong> in the footer section, and <strong>Show country selector on desktop</strong> and <strong>Show language selector on desktop</strong> in the header section (off by default). The mobile menu always includes them.</p>
+          </div>
+        </details>
+
+        <details id="follow-on-shop">
+          <summary><h3>Why doesn't the Follow on Shop button show?</h3></summary>
+          <div class="answer">
+            <p>The button needs all of these:</p>
+            <ul>
+              <li>Shop Pay turned on in <strong>Settings &gt; Payments</strong>.</li>
+              <li>The Shop channel installed on your store.</li>
+              <li><strong>Show Follow on Shop button</strong> turned on in the footer section.</li>
+            </ul>
+            <p>Shopify decides when to output the button. When it doesn't, the footer leaves no empty space.</p>
+          </div>
+        </details>
+
+        <details id="cart-type">
+          <summary><h3>Should I use the cart drawer or the cart page?</h3></summary>
+          <div class="answer">
+            <p>Choose in <strong>Theme settings &gt; Cart &gt; Cart type</strong>.</p>
+            <ul>
+              <li><strong>Drawer</strong> (default): customers stay on the page after adding a product and can keep shopping. Good for large catalogs where customers add several products.</li>
+              <li><strong>Page</strong>: customers go to the cart page after adding a product. Good if you want every customer to review the cart before checkout.</li>
+            </ul>
+            <p>Both show the same information, and the cart page is always available at <code>/cart</code>.</p>
+          </div>
+        </details>
+
+        <details id="updates">
+          <summary><h3>How do I update Glowcore?</h3></summary>
+          <div class="answer">
+            <p>When a new version is available, Shopify shows an update notice for Glowcore in <strong>Online Store &gt; Themes</strong>.</p>
+            <ol>
+              <li>Click the update notice and review what's new in the <a href="changelog.html">changelog</a>.</li>
+              <li>Add the update. Shopify adds the new version to your theme library as an unpublished copy, with the settings and content you set in the theme editor.</li>
+              <li>Preview the updated copy, check your pages, then publish it.</li>
+            </ol>
+            <p class="note note--warn">Changes you made to the theme code aren't carried over to the update. Keep a note of them, or a duplicate of your theme, before you update.</p>
+          </div>
+        </details>
+
+        <details id="translations">
+          <summary><h3>How do I translate the theme?</h3></summary>
+          <div class="answer">
+            <p>Glowcore's storefront text is in English.</p>
+            <ul>
+              <li><strong>To change the wording in English:</strong> go to <strong>Online Store &gt; Themes</strong>, click the <strong>…</strong> (actions) button next to Glowcore and choose <strong>Edit default theme content</strong>. Search for the text, for example "Add to cart", and change it.</li>
+              <li><strong>To sell in other languages:</strong> add and publish the languages in <strong>Settings &gt; Languages</strong>, then translate the theme text and your content with a translation app, such as Shopify's Translate and Adapt app.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details id="discount-codes">
+          <summary><h3>Where do customers enter discount codes?</h3></summary>
+          <div class="answer">
+            <p>At checkout. The cart doesn't have a discount code field. Discounts that are already applied, such as automatic discounts or codes from a discount link, show in the cart drawer and on the cart page.</p>
+          </div>
+        </details>
+
+        <details id="code-edits">
+          <summary><h3>Can I edit the theme code?</h3></summary>
+          <div class="answer">
+            <p>Yes, but custom code changes aren't covered by support. Before you edit code, duplicate your theme in <strong>Online Store &gt; Themes</strong> so you can go back. For custom work, we recommend hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>. Try the <a href="sections.html#custom-liquid">Custom Liquid</a> section or block first, since it doesn't change the theme files.</p>
+          </div>
+        </details>
+      </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; 2026 Denko Themes. Glowcore version 1.0.0.</p>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="support-policy.html">Support policy</a></li>
+            <li><a href="mailto:denkothemes@gmail.com">denkothemes@gmail.com</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

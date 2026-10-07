@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme settings | Glowcore theme docs</title>
+    <meta name="description" content="Every Glowcore theme setting with its label in the theme editor and what it does: logo and favicon, typography, layout, colors, product cards, cart and social media.">
+    <meta name="theme-color" content="#0a0a0d">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true"></span>Glowcore <span class="brand__docs">docs</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting started</a></li>
+          <li><a href="theme-settings.html" aria-current="page">Theme settings</a></li>
+          <li><a href="sections.html">Sections</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="support-policy.html">Support policy</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="container">
+      <div class="page-intro">
+        <span class="eyebrow">Reference</span>
+        <h1>Theme settings</h1>
+        <p class="lead">Theme settings apply to the whole store. In the theme editor, click the gear icon to open them.</p>
+      </div>
+
+      <nav class="panel toc" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Setting groups</h2>
+        <ol>
+          <li><a href="#logo-and-favicon">Logo and favicon</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#product-cards">Product cards</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#social-media">Social media</a></li>
+        </ol>
+      </nav>
+
+      <section class="doc-section" aria-labelledby="logo-and-favicon">
+        <h2 id="logo-and-favicon">Logo and favicon</h2>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Logo and favicon settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Logo image</th><td>Replaces the animated text logo in the header. Leave empty to keep the text logo.</td></tr>
+              <tr><th scope="row">Logo width</th><td>Width of the logo image in the header, from 50 to 300px.<span class="default">Default: 140px</span></td></tr>
+              <tr><th scope="row">Favicon image</th><td>The icon in the browser tab and bookmarks. Use a square image, 32 x 32px recommended.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The footer's Brand block uses this logo too, unless you pick a different image in that block.</p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="typography">
+        <h2 id="typography">Typography</h2>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Typography settings, under the Fonts heading</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Heading and body text</th><td>The font for all headings and body text. Pick any font from the Shopify font library. Bold and italic styles load automatically.<span class="default">Default: Work Sans</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="layout">
+        <h2 id="layout">Layout</h2>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Layout settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Page width</th><td>Maximum width of page content. Narrow or Wide.<span class="default">Default: Narrow</span></td></tr>
+              <tr><th scope="row">Page margin</th><td>Minimum space between the content and the edges of the screen, from 10 to 100px.<span class="default">Default: 20px</span></td></tr>
+              <tr><th scope="row">Input corner radius</th><td>Corner rounding of form fields, such as the search field, email signup and quantity inputs, from 0 to 10px.<span class="default">Default: 4px</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="colors">
+        <h2 id="colors">Colors</h2>
+        <p>Colors are organized in color schemes. Edit a scheme here, then choose it in any section's <strong>Color scheme</strong> setting. Glowcore comes with Scheme 1 (near-black, pink buttons) and Scheme 2 (dark gray, violet buttons). You can add more schemes.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Colors in each color scheme</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Background</th><td>Background color of sections that use the scheme.</td></tr>
+              <tr><th scope="row">Background gradient</th><td>Optional second background color. Glowcore 1.0.0 doesn't use it yet, so you can leave it empty.</td></tr>
+              <tr><th scope="row">Text</th><td>Headings and body text.</td></tr>
+              <tr><th scope="row">Secondary text</th><td>Less prominent text, such as subheadings, dates, vendor names, product counts and helper text.</td></tr>
+              <tr><th scope="row">Icons</th><td>Icons in the footer and in the filters.</td></tr>
+              <tr><th scope="row">Primary button background</th><td>Fill of primary buttons, such as Add to cart, Quick add and Shop now.</td></tr>
+              <tr><th scope="row">Primary button text</th><td>Text on primary buttons.</td></tr>
+              <tr><th scope="row">Primary button border</th><td>Border of primary buttons.</td></tr>
+              <tr><th scope="row">Primary button glow</th><td>The soft neon glow around primary buttons and other glowing elements. Kept separate from the button background so the button text stays readable.</td></tr>
+              <tr><th scope="row">Secondary button background</th><td>Fill of secondary buttons.</td></tr>
+              <tr><th scope="row">Secondary button text</th><td>Text on secondary buttons.</td></tr>
+              <tr><th scope="row">Secondary button border</th><td>Border of secondary buttons.</td></tr>
+              <tr><th scope="row">Accent</th><td>Links, highlights and active states.</td></tr>
+              <tr><th scope="row">Accent background</th><td>Solid accent fill behind small labels, such as the New badge on product cards and the count badges in filters. Its text uses the Primary button text color.</td></tr>
+              <tr><th scope="row">Borders</th><td>Borders and dividers of cards, panels and form fields.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">The Sale badge on product cards uses the primary button color. Keep the Primary button text color readable on both the Primary button background and the Accent background.</p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="product-cards">
+        <h2 id="product-cards">Product cards</h2>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Product card settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Show product rating</th><td>Shows stars from the <code>reviews.rating</code> and <code>reviews.rating_count</code> product metafields, usually filled in by a product reviews app. Products without a rating show no stars.<span class="default">Default: off</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Product cards appear in collections, search results, product carousels, featured collections and related products. A card shows a Sale badge when the product has a compare-at price higher than its price, or a New badge when the product was created in the last 30 days.</p>
+      </section>
+
+      <section class="doc-section" aria-labelledby="cart">
+        <h2 id="cart">Cart</h2>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Cart settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Cart type</th><td><strong>Drawer</strong> opens a side panel after a product is added. <strong>Page</strong> goes to the cart page.<span class="default">Default: Drawer</span></td></tr>
+              <tr><th scope="row">Show cart note</th><td>Adds a note field to the cart drawer and cart page, so customers can leave instructions with their order.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Drawer color scheme</th><td>The color scheme of the cart drawer.<span class="default">Default: Scheme 1</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="doc-section" aria-labelledby="social-media">
+        <h2 id="social-media">Social media</h2>
+        <p>Under <strong>Social media accounts</strong>, paste the full URL of each profile, for example the address of your Instagram page. The footer's <strong>Social media icons</strong> block shows an icon only for the links you fill in.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Social media settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Facebook</th><td>Link to your Facebook page.</td></tr>
+              <tr><th scope="row">Instagram</th><td>Link to your Instagram profile.</td></tr>
+              <tr><th scope="row">TikTok</th><td>Link to your TikTok profile.</td></tr>
+              <tr><th scope="row">X</th><td>Link to your X profile.</td></tr>
+              <tr><th scope="row">YouTube</th><td>Link to your YouTube channel.</td></tr>
+              <tr><th scope="row">Discord</th><td>Invite link to your Discord server.</td></tr>
+              <tr><th scope="row">Twitch</th><td>Link to your Twitch channel.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>&copy; 2026 Denko Themes. Glowcore version 1.0.0.</p>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="support-policy.html">Support policy</a></li>
+            <li><a href="mailto:denkothemes@gmail.com">denkothemes@gmail.com</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
