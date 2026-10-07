@@ -176,17 +176,29 @@ main:focus {
   margin: 0;
   padding: 0;
   list-style: none;
+  align-items: center;
+}
+
+/* Every nav item gets the same box: no inherited list spacing (li + li), so the first item lines up with the rest */
+.site-nav li,
+.site-nav li + li {
+  margin: 0;
+  padding: 0;
 }
 
 .site-nav a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  margin: 0;
   padding: 0.4rem 0.75rem;
+  border: 0;
   border-radius: 10px;
   color: var(--text);
   font-size: 0.95rem;
   font-weight: 600;
+  line-height: 1.2;
+  vertical-align: middle;
   text-decoration: none;
 }
 

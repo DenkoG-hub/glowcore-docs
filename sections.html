@@ -57,7 +57,7 @@
           <li><a href="#trust-bar">Trust bar</a></li>
           <li><a href="#featured-collection">Featured collection</a></li>
           <li><a href="#featured-product">Featured product</a></li>
-          <li><a href="#blog-posts">Blog posts</a></li>
+          <li><a href="#featured-blog">Featured blog</a></li>
           <li><a href="#image-gallery">Image gallery</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#email-signup">Email signup</a></li>
@@ -125,7 +125,7 @@
             <caption>Custom Liquid block (header)</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Custom Liquid</th><td>Shows next to the search and cart icons. Add app snippets or other Liquid code.</td></tr>
+              <tr><th scope="row">Liquid code</th><td>Shows next to the search and cart icons. Add app snippets or other Liquid code.</td></tr>
             </tbody>
           </table>
         </div>
@@ -135,19 +135,23 @@
 
       <section class="doc-section" aria-labelledby="announcement-bar">
         <h2 id="announcement-bar">Announcement bar</h2>
-        <p>A scrolling bar above the header for one short message, such as your shipping offer. It pauses when the pointer is over it and doesn't move for customers who turn on reduced motion.</p>
+        <p>A scrolling bar above the header for short messages, such as your shipping offer. Add up to 6 Announcement blocks. With more than one, a separator sits between the messages. The bar pauses when the pointer is over it or a link in it has keyboard focus, and it stays static for customers who turn on reduced motion.</p>
         <div class="table-wrap">
           <table class="settings">
             <caption>Announcement bar settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Show truck icon</th><td>Shows a delivery truck icon before the text.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show truck icon</th><td>Shows a delivery truck icon before each message.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Padding</th></tr>
+              <tr><th scope="row">Top padding</th><td>Space above the messages, from 0 to 100px.<span class="default">Default: 0px</span></td></tr>
+              <tr><th scope="row">Bottom padding</th><td>Space below the messages, from 0 to 100px.<span class="default">Default: 0px</span></td></tr>
             </tbody>
           </table>
         </div>
         <div class="table-wrap">
           <table class="settings">
-            <caption>Announcement block (one per bar)</caption>
+            <caption>Announcement block (up to 6 per bar)</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Text</th><td>The message.<span class="default">Default: Free shipping on orders over $50</span></td></tr>
@@ -198,9 +202,11 @@
               <tr><th scope="row">Subheading</th><td>Supporting text.<span class="default">Default: Discover the products everyone is talking about.</span></td></tr>
               <tr><th scope="row">Button label</th><td>Text on the button.<span class="default">Default: Shop now</span></td></tr>
               <tr><th scope="row">Button link</th><td>Where the button goes.</td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
         </div>
+        <p>The section also has Top padding and Bottom padding.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
@@ -214,11 +220,13 @@
             <tbody>
               <tr><th scope="row">Heading</th><td>Heading above the carousel.<span class="default">Default: Trending now</span></td></tr>
               <tr><th scope="row">Collection</th><td>The collection the products come from.</td></tr>
-              <tr><th scope="row">Show "View all" link</th><td>Links to the selected collection.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show "View all" button</th><td>Links to the selected collection.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Products to show</th><td>From 4 to 20 products.<span class="default">Default: 10</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
         </div>
+        <p>The section also has Top padding and Bottom padding.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
@@ -231,6 +239,7 @@
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Heading</th><td>Heading above the tiles.<span class="default">Default: Shop by category</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
         </div>
@@ -245,12 +254,23 @@
             </tbody>
           </table>
         </div>
+        <p>The section also has Top padding and Bottom padding.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
       <section class="doc-section" aria-labelledby="trust-bar">
         <h2 id="trust-bar">Trust bar</h2>
         <p>A row of short promises with icons, such as shipping, secure checkout, returns and support. Add one Trust item block per promise.</p>
+        <div class="table-wrap">
+          <table class="settings">
+            <caption>Trust bar settings</caption>
+            <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The section also has Top padding and Bottom padding.</p>
         <div class="table-wrap">
           <table class="settings">
             <caption>Trust item block</caption>
@@ -279,9 +299,11 @@
               <tr><th scope="row">Collection</th><td>The collection the products come from.</td></tr>
               <tr><th scope="row">Products to show</th><td>4, 8 or 12 products.<span class="default">Default: 8</span></td></tr>
               <tr><th scope="row">Show "View all" button</th><td>Adds a button to the full collection.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
         </div>
+        <p>The section also has Top padding and Bottom padding.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
@@ -301,16 +323,16 @@
             </tbody>
           </table>
         </div>
-        <p>Block settings are described in <a href="#product-blocks">Product blocks</a>. In this section the Product rating block has no settings.</p>
+        <p>Block settings are described in <a href="#product-blocks">Product blocks</a>. In this section, the Product rating block's <strong>Link to reviews</strong> setting links to the element with the ID reviews on the product page, for example a reviews app block.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
-      <section class="doc-section" aria-labelledby="blog-posts">
-        <h2 id="blog-posts">Blog posts</h2>
+      <section class="doc-section" aria-labelledby="featured-blog">
+        <h2 id="featured-blog">Featured blog</h2>
         <p>The latest posts from one blog as cards, for the home page or any other page.</p>
         <div class="table-wrap">
           <table class="settings">
-            <caption>Blog posts settings</caption>
+            <caption>Featured blog settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Heading</th><td>Heading above the posts.<span class="default">Default: From the blog</span></td></tr>
@@ -466,7 +488,7 @@
             </tbody>
           </table>
         </div>
-        <p>The section also has Top padding and Bottom padding. A <strong>Custom Liquid</strong> block with a <strong>Custom Liquid</strong> field is also available in the header, footer, product information, featured product, collection, cart footer, page, Custom section and Group.</p>
+        <p>The section also has Top padding and Bottom padding. A <strong>Custom Liquid</strong> block with a <strong>Liquid code</strong> field is also available in the header, footer, product information, featured product, collection, cart footer, page, Custom section and Group.</p>
         <p class="note note--warn">Code you add here isn't covered by theme support. See the <a href="support-policy.html">support policy</a>.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
@@ -654,12 +676,12 @@
               <tr><th scope="row">Link label</th><td>Text of the link that opens the popup.<span class="default">Default: Size guide</span></td></tr>
               <tr><th scope="row">Page</th><td>The page whose content shows in the popup.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">17. Custom Liquid</th></tr>
-              <tr><th scope="row">Custom Liquid</th><td>Add app snippets or other Liquid code to create advanced customizations.</td></tr>
+              <tr><th scope="row">Liquid code</th><td>Add app snippets or other Liquid code to create advanced customizations.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">18. Complementary products (product page only)</th></tr>
               <tr><th scope="row">Heading</th><td>Heading above the products.<span class="default">Default: Pairs well with</span></td></tr>
               <tr><th scope="row">Products to show</th><td>From 1 to 10.<span class="default">Default: 3</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">19. Product rating</th></tr>
-              <tr><th scope="row">Link to reviews</th><td>Product page only. Scrolls to the element with the ID reviews, for example a reviews app block. Stays plain text when the page has no such element.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Link to reviews</th><td>On the product page, scrolls to the element with the ID reviews, for example a reviews app block. Stays plain text when the page has no such element. In Featured product, links to the reviews on the product page.<span class="default">Default: off</span></td></tr>
             </tbody>
           </table>
         </div>
