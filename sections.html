@@ -93,13 +93,13 @@
             <caption>Header settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Logo text</th><td>Text logo in the header. Leave empty to show the store name. Hidden when a logo image is set in Theme settings.</td></tr>
+              <tr><th scope="row">Logo text</th><td>Text logo in the header. Leave empty to show the store name. A logo image in Theme settings replaces this text.</td></tr>
               <tr><th scope="row">Main menu</th><td>The menu for the header navigation and the mobile menu.<span class="default">Default: Main menu</span></td></tr>
               <tr><th scope="row">Customer account menu</th><td>The links in the account menu that opens from the account icon. The icon shows only when customer accounts are turned on.<span class="default">Default: Customer account main menu</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Desktop navigation</th></tr>
               <tr><th scope="row">Navigation type</th><td><strong>Dropdown</strong> shows level 2 links in a dropdown with level 3 links indented under them. <strong>Mega menu</strong> shows level 2 links as columns in a full-width panel and supports promo blocks.<span class="default">Default: Dropdown</span></td></tr>
-              <tr><th scope="row">Open navigation on hover</th><td>Opens dropdowns and mega menus when the pointer rests on a menu item. Clicking and the keyboard always work.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Hover delay</th><td>How long the pointer rests before a menu opens, from 0 to 600 ms. Shows when Open navigation on hover is on.<span class="default">Default: 150 ms</span></td></tr>
+              <tr><th scope="row">Open navigation on hover</th><td>Opens dropdowns and mega menus when the pointer rests on an item. Clicks and the keyboard always work.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Hover delay</th><td>Time in milliseconds (ms) the pointer rests on an item before its menu opens, from 0 to 600 ms. Shows when Open navigation on hover is on.<span class="default">Default: 150 ms</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Country and language selectors</th></tr>
               <tr><th scope="row">Show country selector on desktop</th><td>Adds a compact country and currency selector next to the account and cart icons from 1280px wide.<span class="default">Default: off</span></td></tr>
               <tr><th scope="row">Show language selector on desktop</th><td>Adds a compact language selector next to the account and cart icons from 1280px wide.<span class="default">Default: off</span></td></tr>
@@ -142,7 +142,7 @@
             <caption>Announcement bar settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Show truck icon</th><td>Shows a delivery truck icon before each message.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show truck icon</th><td>Shows a small truck icon before each announcement.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Padding</th></tr>
               <tr><th scope="row">Top padding</th><td>Space above the messages, from 0 to 100px.<span class="default">Default: 0px</span></td></tr>
@@ -319,8 +319,8 @@
               <tr><th scope="row">Product</th><td>The product to show.</td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
               <tr><th scope="row">Desktop media width</th><td>Small, Medium or Large. Media is always full width on mobile.<span class="default">Default: Large</span></td></tr>
-              <tr><th scope="row">Use image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Show link to product page</th><td>Adds a link to the full product page.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Enable image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show link to product page</th><td>Adds a link to the full product page below the product information.<span class="default">Default: on</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -403,7 +403,7 @@
               <tr><th scope="row">Text</th><td>Optional text under the heading.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Images</th></tr>
               <tr><th scope="row">Before image</th><td>Shown on the left side of the divider. Set a focal point to keep the subject in view.</td></tr>
-              <tr><th scope="row">After image</th><td>Shown on the right side of the divider, at the same size and ratio.</td></tr>
+              <tr><th scope="row">After image</th><td>Appears under the before image, at the same size and ratio. Shown on the right side of the divider.</td></tr>
               <tr><th scope="row">Image ratio</th><td>Adapt to before image, 16:9, 4:3 or Square. Both images are cropped to this ratio and never stretched.<span class="default">Default: 16:9</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Slider</th></tr>
               <tr><th scope="row">Starting position</th><td>How much of the before image shows when the page loads, from 10 to 90%.<span class="default">Default: 50%</span></td></tr>
@@ -456,7 +456,7 @@
 
       <section class="doc-section" aria-labelledby="email-signup">
         <h2 id="email-signup">Email signup</h2>
-        <p>A newsletter signup form with a heading and text. Subscribers are added to Customers with the newsletter tag and email marketing consent.</p>
+        <p>A newsletter signup form with a heading and text. Shopify adds subscribers to Customers with the newsletter tag and email marketing consent.</p>
         <div class="table-wrap">
           <table class="settings">
             <caption>Email signup settings</caption>
@@ -567,21 +567,21 @@
 
       <section class="doc-section" aria-labelledby="footer">
         <h2 id="footer">Footer</h2>
-        <p>The bottom of every page. Add blocks for menus, text, your brand, email signup, social media icons and Custom Liquid. The blocks sit in a glass panel, side by side on desktop up to the maximum number of columns, with neon dividers between columns. The column with the Brand block is wider. A last row of blocks that isn't full is centered. Below the panel, the bottom row shows the country and language selectors and the Follow on Shop button, the copyright line with the Powered by Shopify link and policy links, and the payment icons. On mobile, menu blocks become accordions.</p>
+        <p>The bottom of every page. Add blocks for menus, text, your brand, email signup, social media icons and Custom Liquid. The blocks sit in a glass panel, side by side on desktop up to the maximum number of columns, with neon dividers between columns. The column with the Brand block is wider. A last row of blocks that isn't full is centered. Below the panel, the bottom bar shows the country and language selectors and the Follow on Shop button, the copyright line with the Powered by Shopify link and policy links, and the payment icons. On mobile, menu blocks become accordions.</p>
         <div class="table-wrap">
           <table class="settings">
             <caption>Footer settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Color scheme</th><td>Colors of the footer.</td></tr>
-              <tr><th scope="row">Maximum columns on desktop</th><td>From 2 to 6 block columns.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Maximum columns on desktop</th><td>Maximum number of blocks side by side on desktop, from 2 to 6. Fewer blocks use fewer columns.<span class="default">Default: 4</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Social media icons</th></tr>
               <tr><th scope="row">Show social media icons</th><td>Shows your social media icons in the footer. Add social media links in Theme settings &gt; Social media. Nothing shows if no links are filled in.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Position</th><td>Where the icons show: <strong>Brand column</strong> (below the Brand block's text) or <strong>Bottom row</strong> (above the selectors and copyright line). Shows only when Show social media icons is on. The brand column needs a Brand block. Without one, icons show in the bottom row. On mobile, icons always show above the bottom row.<span class="default">Default: Brand column</span></td></tr>
-              <tr><th colspan="2" scope="colgroup" class="group">Bottom row</th></tr>
+              <tr><th scope="row">Position</th><td>Where the icons show: <strong>Brand column</strong> (below the Brand block's text) or <strong>Bottom bar</strong> (above the selectors and copyright line). Shows only when Show social media icons is on. The brand column needs a Brand block. Without one, icons show in the bottom bar. On mobile, icons always show above the bottom bar.<span class="default">Default: Brand column</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">Bottom bar</th></tr>
               <tr><th scope="row">Show country selector</th><td>Shows only when the store sells to more than one country or region in Markets.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Show language selector</th><td>Shows only when the store has more than one published language.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Show Follow on Shop button</th><td>Lets customers follow your store in the Shop app. Shop Pay and the Shop channel are required.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show Follow on Shop button</th><td>Lets customers follow your store in the Shop app. Requires Shop Pay and the Shop channel.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Show payment icons</th><td>Shows the icons of the payment methods your store accepts.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Show policy links</th><td>Links to your policies. Add policies in Settings &gt; Policies.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Show Powered by Shopify link</th><td>Adds the Powered by Shopify link after the copyright.<span class="default">Default: on</span></td></tr>
@@ -592,11 +592,11 @@
         <h3>Footer blocks</h3>
         <div class="table-wrap">
           <table class="settings">
-            <caption>Menu block</caption>
+            <caption>Footer menu block</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Heading</th><td>Leave empty to use the menu title.</td></tr>
-              <tr><th scope="row">Menu</th><td>The menu to show.<span class="default">Default: Footer menu</span></td></tr>
+              <tr><th scope="row">Footer menu</th><td>The menu to show.<span class="default">Default: Footer menu</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -656,7 +656,7 @@
             <tbody>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
               <tr><th scope="row">Desktop media width</th><td>Small, Medium or Large. Media is always full width on mobile.<span class="default">Default: Large</span></td></tr>
-              <tr><th scope="row">Use image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Enable image zoom</th><td>Opens images in a full-screen viewer when clicked.<span class="default">Default: on</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -678,16 +678,16 @@
               <tr><th scope="row">Vendor</th><td>The product's vendor or brand. No settings.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">3. Text</th></tr>
               <tr><th scope="row">Text</th><td>Short text, such as a highlight or a note. Can include bold, italic and links.<span class="default">Default: Text block</span></td></tr>
-              <tr><th scope="row">Text style</th><td>Body text, Subheading or Uppercase.<span class="default">Default: Body text</span></td></tr>
+              <tr><th scope="row">Text style</th><td>Body text, Subheading or Uppercase. Subheading shows muted, larger text. Uppercase shows small, spaced capitals.<span class="default">Default: Body text</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">4. Price</th></tr>
               <tr><th scope="row">Show tax and shipping information</th><td>Shows whether taxes are included and that shipping is calculated at checkout, with a link to your shipping policy when you have one. The price also shows the compare-at price and the unit price when they're set.<span class="default">Default: on</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">5. Variant picker</th></tr>
-              <tr><th scope="row">Style</th><td>Buttons or Dropdown. Sold out and unavailable options are marked.<span class="default">Default: Buttons</span></td></tr>
+              <tr><th scope="row">Style</th><td>Buttons show every option at once. Dropdown saves space when a product has many options. Sold out and unavailable options are marked.<span class="default">Default: Buttons</span></td></tr>
               <tr><th scope="row">Show swatches</th><td>Uses the swatch color or image set on each option value in the product admin. See <a href="faq.html#swatches">swatches</a>.<span class="default">Default: on</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">6. Quantity selector</th></tr>
               <tr><th scope="row">Quantity selector</th><td>Lets customers choose a quantity. Follows quantity rules (minimum, maximum and increment) and lists volume pricing when you set them up. No settings.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">7. Buy buttons</th></tr>
-              <tr><th scope="row">Show dynamic checkout buttons</th><td>Customers see their preferred payment option, like PayPal or Apple Pay. Hidden on gift cards. The block also shows the Add to cart button and the Shop Pay Installments message when it's available.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show dynamic checkout buttons</th><td>Customers see their preferred payment option, like PayPal or Apple Pay. Gift cards never show these buttons. The block also shows the Add to cart button and the Shop Pay Installments message when it's available.<span class="default">Default: on</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">8. Purchase options</th></tr>
               <tr><th scope="row">Purchase options</th><td>Shows subscription options when the product has selling plans from a subscription app. No settings.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">9. Pickup availability</th></tr>
@@ -732,14 +732,14 @@
 
       <section class="doc-section" aria-labelledby="related-products">
         <h2 id="related-products">Related products</h2>
-        <p>Product cards under the product information. Recommendations are generated automatically from sales and product data. Fine-tune them in the Search and Discovery app.</p>
+        <p>Product cards under the product information. Shopify generates recommendations automatically from sales and product data. Fine-tune them in the Search and Discovery app.</p>
         <div class="table-wrap">
           <table class="settings">
             <caption>Related products settings</caption>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Heading</th><td>Heading above the products.<span class="default">Default: You may also like</span></td></tr>
-              <tr><th scope="row">Maximum products to show</th><td>From 2 to 10.<span class="default">Default: 4</span></td></tr>
+              <tr><th scope="row">Products to show</th><td>From 2 to 10.<span class="default">Default: 4</span></td></tr>
               <tr><th scope="row">Columns on desktop</th><td>From 2 to 5.<span class="default">Default: 4</span></td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
@@ -792,8 +792,8 @@
             <tbody>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Collection banner</th></tr>
-              <tr><th scope="row">Show collection image</th><td>Shows the collection image, 4:3 aspect ratio recommended. Shows wider on mobile.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Show collection description</th><td>Shows the description from the collection admin.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show image</th><td>Shows the collection image, 4:3 aspect ratio recommended. Shows wider on mobile.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show description</th><td>Shows the description from the collection admin.<span class="default">Default: on</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">Filtering and sorting</th></tr>
               <tr><th scope="row">Show filters</th><td>Customize filters with the Search and Discovery app.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Filter layout on desktop</th><td>Vertical sidebar or Horizontal bar. Mobile always shows filters in a drawer.<span class="default">Default: Vertical sidebar</span></td></tr>
@@ -874,7 +874,7 @@
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Content width</th><td>Narrow, Medium or Wide.<span class="default">Default: Narrow</span></td></tr>
-              <tr><th scope="row">Comments per page</th><td>From 5 to 50. Comments show when they are enabled in the blog settings.<span class="default">Default: 10</span></td></tr>
+              <tr><th scope="row">Comments per page</th><td>From 5 to 50. Comments appear only when you turn them on in the blog settings.<span class="default">Default: 10</span></td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
@@ -921,7 +921,7 @@
             <tbody>
               <tr><th scope="row">Content width</th><td>Narrow, Medium or Wide.<span class="default">Default: Narrow</span></td></tr>
               <tr><th scope="row">Heading alignment</th><td>Left or Center.<span class="default">Default: Left</span></td></tr>
-              <tr><th scope="row">Show content in a glass panel</th><td>Places the page content in a glass panel.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Show content in a glass panel</th><td>Places the page content on a translucent glass panel.<span class="default">Default: off</span></td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
@@ -939,14 +939,14 @@
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th scope="row">Heading</th><td>Leave empty to show "Collections".</td></tr>
-              <tr><th scope="row">Sort collections</th><td>Alphabetically, A-Z; Alphabetically, Z-A; Product count, high to low; Product count, low to high; Date, new to old; or Date, old to new. Sorting applies to the collections shown on each page.<span class="default">Default: Alphabetically, A-Z</span></td></tr>
-              <tr><th scope="row">Collections per page</th><td>From 12 to 48.<span class="default">Default: 24</span></td></tr>
+              <tr><th scope="row">Sort order</th><td>Alphabetically, A-Z; Alphabetically, Z-A; Product count, high to low; Product count, low to high; Date, new to old; or Date, old to new. Sorting applies to the collections shown on each page.<span class="default">Default: Alphabetically, A-Z</span></td></tr>
+              <tr><th scope="row">Items per page</th><td>From 12 to 48.<span class="default">Default: 24</span></td></tr>
               <tr><th scope="row">Columns on desktop</th><td>From 3 to 5.<span class="default">Default: 4</span></td></tr>
               <tr><th scope="row">Columns on mobile</th><td>1 or 2.<span class="default">Default: 2</span></td></tr>
               <tr><th scope="row">Image ratio</th><td>Square, Portrait or Landscape.<span class="default">Default: Square</span></td></tr>
               <tr><th scope="row">Show product count</th><td>Shows how many products each collection has.<span class="default">Default: on</span></td></tr>
-              <tr><th scope="row">Show collection description</th><td>Shows each collection's description.<span class="default">Default: off</span></td></tr>
-              <tr><th scope="row">Hide empty collections</th><td>Leaves out collections with no products.<span class="default">Default: on</span></td></tr>
+              <tr><th scope="row">Show description</th><td>Shows each collection's description.<span class="default">Default: off</span></td></tr>
+              <tr><th scope="row">Hide empty items</th><td>Hides collections that contain no products.<span class="default">Default: on</span></td></tr>
               <tr><th scope="row">Color scheme</th><td>Colors of the section.</td></tr>
             </tbody>
           </table>
