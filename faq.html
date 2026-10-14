@@ -44,6 +44,7 @@
           <li><a href="#swatches">How do I show color swatches?</a></li>
           <li><a href="#filters">How do I set up filters?</a></li>
           <li><a href="#ratings">How do I show product ratings?</a></li>
+          <li><a href="#spec-chips">How do I show specs on product cards?</a></li>
           <li><a href="#variant-images">How do I show a different image for each variant?</a></li>
           <li><a href="#mega-menu">How do I set up the mega menu?</a></li>
           <li><a href="#selectors">Why don't the country or language selectors show?</a></li>
@@ -95,6 +96,20 @@
               <li>Optional: turn on <strong>Link to reviews</strong> in the Product rating block. It links to the element with the ID <code>reviews</code>, for example your reviews app's block.</li>
             </ol>
             <p>Products without a rating show no stars. Glowcore never shows placeholder or sample ratings.</p>
+          </div>
+        </details>
+
+        <details id="spec-chips">
+          <summary><h3>How do I show specs on product cards?</h3></summary>
+          <div class="answer">
+            <p>Spec chips show up to three short specs, such as "16 GB" or "Wireless", under the product title on product cards. They come from product metafields, so no app is needed.</p>
+            <ol>
+              <li>In your Shopify admin, go to <strong>Settings &gt; Metafields and metaobjects &gt; Products</strong> and open a metafield definition, or add one (for example a single line text field named Size). Definitions for all products are on the <strong>Assigned to all products</strong> tab, and definitions from your product categories are on the <strong>Assigned to categories</strong> tab. The key is shown as namespace.key, for example <code>custom.size</code>.</li>
+              <li>Fill in the metafield on your products.</li>
+              <li>In the theme editor, open <strong>Theme settings &gt; Product cards</strong>, make sure <strong>Show spec chips</strong> is on, and enter the key in <strong>Chip 1 metafield</strong>. Use <strong>Chip 2 metafield</strong> and <strong>Chip 3 metafield</strong> for more specs.</li>
+            </ol>
+            <p>Text, number, measurement and list metafields work. For a metaobject, the chip shows the entry's label field (or its name or title field). For lists, the first entry is shown on the chip, and hovering the chip shows up to three entries. Products without a value show no chip, and a card with no values shows no chips at all.</p>
+            <p>For a full specs table on the product page, add the <strong>Specs</strong> block to <strong>Product information</strong> and connect each row value to a metafield with the dynamic source button.</p>
           </div>
         </details>
 

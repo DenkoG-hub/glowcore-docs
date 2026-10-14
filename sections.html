@@ -660,7 +660,7 @@
             </tbody>
           </table>
         </div>
-        <p>The details column is built from the 19 blocks below plus app blocks. Drag them to change the order. The gift card product template (<code>product.gift-card</code>) uses the same section.</p>
+        <p>The details column is built from the 20 blocks below plus app blocks. Drag them to change the order. The gift card product template (<code>product.gift-card</code>) uses the same section.</p>
         <p class="back-to-top"><a href="#toc-heading">Back to the list of sections</a></p>
       </section>
 
@@ -669,7 +669,7 @@
         <p>These blocks are used by Product information and Featured product. Blocks without settings are listed with what they show.</p>
         <div class="table-wrap">
           <table class="settings">
-            <caption>All 19 product blocks</caption>
+            <caption>All 20 product blocks</caption>
             <thead><tr><th scope="col">Block and settings</th><th scope="col">What it does</th></tr></thead>
             <tbody>
               <tr><th colspan="2" scope="colgroup" class="group">1. Title</th></tr>
@@ -717,6 +717,10 @@
               <tr><th scope="row">Products to show</th><td>From 1 to 10.<span class="default">Default: 3</span></td></tr>
               <tr><th colspan="2" scope="colgroup" class="group">19. Product rating</th></tr>
               <tr><th scope="row">Link to reviews</th><td>On the product page, scrolls to the element with the ID reviews, for example a reviews app block. Stays plain text when the page has no such element. In Featured product, links to the reviews on the product page.<span class="default">Default: off</span></td></tr>
+              <tr><th colspan="2" scope="colgroup" class="group">20. Specs (product page only)</th></tr>
+              <tr><th scope="row">Heading</th><td>Heading of the specs panel. Leave it empty to hide it.<span class="default">Default: Specs</span></td></tr>
+              <tr><th scope="row">Row 1 label to Row 6 label</th><td>Name of each spec, such as Connection or Weight. A row with a value but no label shows "Spec 1", "Spec 2" and so on.</td></tr>
+              <tr><th scope="row">Row 1 value to Row 6 value</th><td>Value of each spec. Type it, or click the dynamic source button to connect a product metafield so each product shows its own value. Rows without a value are hidden, and the whole block is hidden when no row has a value.</td></tr>
             </tbody>
           </table>
         </div>
@@ -724,6 +728,7 @@
         <ul>
           <li><strong>Complementary products:</strong> set up complementary products in the Search and Discovery app. The block is empty until you do.</li>
           <li><strong>Product rating:</strong> shows the rating saved by a product reviews app in the <code>reviews.rating</code> metafield. With no rating, nothing shows. See <a href="faq.html#ratings">product ratings</a>.</li>
+          <li><strong>Specs:</strong> connect each value to a product metafield (for example <code>custom.connection</code>) so one block works for every product. See <a href="faq.html#spec-chips">specs on product cards</a>.</li>
           <li><strong>Inventory status:</strong> shows your real stock only. Glowcore never invents stock levels.</li>
           <li><strong>App blocks:</strong> click <strong>Add block</strong> and pick a block from an installed app, such as a reviews widget.</li>
         </ul>
